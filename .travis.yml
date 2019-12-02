@@ -1,6 +1,11 @@
 add_ons:
   chrome: stable
+
 language: ruby
+
+services:
+  - mysql
+  - postgresql
 
 rvm:
   - 2.4.9
@@ -41,4 +46,5 @@ before_script:
 
 script:
   - bundle exec rake spec --trace
+
 cache: bundler
